@@ -1,0 +1,33 @@
+import java.util.*;
+public class SelectionSort {
+
+    public static void Selection_Sort(int numbers[]){
+        for(int i=0;i<numbers.length;i++){
+            int MinPOs=i;
+            for(int j=i+1;j<numbers.length;j++){
+                if(numbers[MinPOs]>numbers[j]){
+                    MinPOs=j;
+                }
+            }
+            //swapping outside of the loop
+            int temp=numbers[MinPOs];
+            numbers[MinPOs]=numbers[i];
+            numbers[i]=temp;
+        }
+    }
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the size of an array");
+        int n=sc.nextInt();
+        System.out.println("enter the "+n +"array numbers ");
+        int numbers[]= new int[n];
+        for(int i=0;i<numbers.length;i++){
+            numbers[i]=sc.nextInt();
+        }
+        Selection_Sort(numbers);
+        for(int i=0;i<numbers.length;i++){
+            System.out.print(numbers[i]+" ");
+        }
+    }
+    
+}
