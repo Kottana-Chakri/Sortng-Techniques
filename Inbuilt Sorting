@@ -1,0 +1,20 @@
+import java.util.*;//java.util.Arrays;
+public class InbuiltSort {
+    public static void main(String[] args) {
+        
+    
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the size of an array");
+        int n=sc.nextInt();
+        System.out.println("enter the "+n +"array numbers ");
+        int numbers[]= new int[n];
+        for(int i=0;i<numbers.length;i++){
+            numbers[i]=sc.nextInt();
+        }
+        Arrays.sort(numbers);
+        //Arrays.sort(numbers,0,3);
+        for(int i=0;i<numbers.length;i++){
+            System.out.print(numbers[i]+" ");
+        }
+    }
+}
